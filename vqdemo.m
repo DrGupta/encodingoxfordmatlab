@@ -1,6 +1,6 @@
 bCrossValSVM = true;
 voc_size = 4000; % vocabulary size
-DataDir = '/home/personnels/gupta/CodeX/oxford/';
+DataDir = '/home/personnels/gupta/CodeX/encodingoxfordmatlab/';
 
 %% initialize experiment parameters
 prms.experiment.name = 'vqdemo'; % experiment name - prefixed to all output files other than codes
@@ -11,7 +11,7 @@ prms.codebook = fullfile(DataDir, sprintf('data/codebooks/kmeans_%d.mat', voc_si
 prms.experiment.dataset = 'VOC2007'; % dataset name - currently only VOC2007 supported
 prms.experiment.evalusing = 'precrec'; % evaluation method - currently only precision recall supported
 
-prms.paths.dataset = '/home/personnels/gupta/CodeX/oxford/data/common/datasets/';
+prms.paths.dataset = [ DataDir 'data/common/datasets/'];
 prms.paths.codes = fullfile(DataDir,'data/codes/'); % path where codefiles should be stored
 prms.paths.compdata = fullfile(DataDir,'data/compdata/'); % path where all other compdata (kernel matrices, SVM models etc.) should be stored
 prms.paths.results = fullfile(DataDir,'data/results/'); % path where results should be stored
